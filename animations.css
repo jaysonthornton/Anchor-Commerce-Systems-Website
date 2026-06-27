@@ -1,7 +1,7 @@
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(26px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
 }
 
 .reveal.visible {
@@ -10,12 +10,39 @@
 }
 
 .card,
-.hero-panel {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.price-card,
+.mock-window,
+.steps div {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover,
-.hero-panel:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 26px 70px rgba(10, 17, 40, 0.14);
+.price-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 75px rgba(10, 17, 40, 0.15);
+}
+
+.price-card.featured:hover {
+  transform: translateY(-12px);
+}
+
+.mock-window:hover {
+  transform: rotate(0deg) translateY(-6px);
+}
+
+.hero-bg-orb {
+  animation: floatOrb 9s ease-in-out infinite alternate;
+}
+
+.orb-two {
+  animation-delay: 2s;
+}
+
+@keyframes floatOrb {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(-22px) translateX(16px);
+  }
 }
