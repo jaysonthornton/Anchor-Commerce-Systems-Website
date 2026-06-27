@@ -1,1 +1,53 @@
-/* Phase 1 */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 76px;
+    right: 8%;
+    left: 8%;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header {
+    padding: 16px 5%;
+  }
+
+  .hero,
+  .section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .brand span:last-child {
+    font-size: 0.9rem;
+  }
+
+  .cta {
+    margin: 60px 5%;
+  }
+}
