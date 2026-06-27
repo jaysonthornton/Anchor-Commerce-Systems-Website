@@ -1,0 +1,1 @@
+@media(max-width:768px){.hero{padding:40px}}
