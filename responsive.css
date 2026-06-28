@@ -131,3 +131,14 @@
     align-items: flex-start;
   }
 }
+
+@media (max-width: 900px) {
+  .portfolio-grid,
+  .case-study-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-preview {
+    transform: none;
+  }
+}
