@@ -116,3 +116,18 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 900px) {
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-summary {
+    transform: none;
+  }
+
+  .revenue-total {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
