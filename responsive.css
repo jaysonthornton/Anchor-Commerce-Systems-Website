@@ -142,3 +142,41 @@
     transform: none;
   }
 }
+
+@media (max-width: 1050px) {
+  .showcase-block,
+  .showcase-block.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-orbit {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 720px) {
+  .kds-board {
+    grid-template-columns: 1fr;
+  }
+
+  .browser-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .orbit-card {
+    position: static;
+    margin: 8px;
+  }
+
+  .portfolio-orbit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: auto;
+  }
+
+  .orbit-card.big {
+    width: 100%;
+    text-align: center;
+  }
+}
