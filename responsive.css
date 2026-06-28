@@ -180,3 +180,14 @@
     text-align: center;
   }
 }
+
+@media (max-width: 900px) {
+  .client-dashboard-preview {
+    transform: none;
+  }
+
+  .client-metrics,
+  .client-actions {
+    grid-template-columns: 1fr;
+  }
+}
