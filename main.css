@@ -579,3 +579,135 @@ h3 {
   padding-top: 20px;
   font-size: 0.9rem !important;
 }
+
+.service-dashboard {
+  position: relative;
+  z-index: 2;
+  padding: 28px;
+  border-radius: 32px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.86), rgba(255,255,255,.62));
+  border: 1px solid rgba(228,235,243,.95);
+  box-shadow: var(--shadow-strong);
+  backdrop-filter: blur(22px);
+  transform: rotate(1.2deg);
+}
+
+.dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.dashboard-top p {
+  color: var(--cerulean);
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.dashboard-top h3 {
+  margin: 0;
+  color: var(--prussian);
+  font-size: 1.35rem;
+}
+
+.status-pill {
+  background: rgba(18,130,162,.12);
+  color: var(--cerulean);
+  padding: 8px 13px;
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: .78rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.dash-card {
+  padding: 18px;
+  border-radius: 22px;
+  background: white;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 35px rgba(10,17,40,.08);
+}
+
+.dash-card.wide {
+  grid-column: span 2;
+}
+
+.dash-card span {
+  display: block;
+  color: var(--muted);
+  font-size: .85rem;
+  margin-bottom: 8px;
+}
+
+.dash-card strong {
+  display: block;
+  color: var(--prussian);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.dash-card small {
+  display: block;
+  margin-top: 8px;
+  color: var(--cerulean);
+  font-weight: 800;
+}
+
+.mini-bars {
+  display: flex;
+  align-items: end;
+  gap: 8px;
+  margin-top: 18px;
+  height: 54px;
+}
+
+.mini-bars i {
+  flex: 1;
+  border-radius: 999px 999px 6px 6px;
+  background: linear-gradient(180deg, var(--cerulean), var(--yale));
+}
+
+.mini-bars i:nth-child(1) { height: 38%; }
+.mini-bars i:nth-child(2) { height: 72%; }
+.mini-bars i:nth-child(3) { height: 55%; }
+.mini-bars i:nth-child(4) { height: 88%; }
+.mini-bars i:nth-child(5) { height: 64%; }
+
+.dashboard-flow {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.dashboard-flow div {
+  background: var(--prussian);
+  color: white;
+  padding: 9px 12px;
+  border-radius: 999px;
+  font-size: .78rem;
+  font-weight: 900;
+}
+
+.dashboard-flow span {
+  width: 22px;
+  height: 2px;
+  background: var(--cerulean);
+  opacity: .65;
+}
+
+.service-dashboard:hover {
+  transform: rotate(0deg) translateY(-6px);
+}
