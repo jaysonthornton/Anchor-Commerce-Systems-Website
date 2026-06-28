@@ -1,21 +1,17 @@
 console.log("Anchor Commerce Systems site loaded.");
 
 document.addEventListener("DOMContentLoaded", () => {
-  const contactForm = document.getElementById("contactForm");
+  const sendButton = document.getElementById("sendProjectRequest");
 
-  if (!contactForm) return;
+  if (!sendButton) return;
 
-  contactForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const formData = new FormData(contactForm);
-
-    const name = formData.get("Name") || "";
-    const business = formData.get("Business") || "";
-    const email = formData.get("Email") || "";
-    const phone = formData.get("Phone") || "";
-    const service = formData.get("Service") || "";
-    const message = formData.get("Message") || "";
+  sendButton.addEventListener("click", () => {
+    const name = document.querySelector('[name="Name"]')?.value || "";
+    const business = document.querySelector('[name="Business"]')?.value || "";
+    const email = document.querySelector('[name="Email"]')?.value || "";
+    const phone = document.querySelector('[name="Phone"]')?.value || "";
+    const service = document.querySelector('[name="Service"]')?.value || "";
+    const message = document.querySelector('[name="Message"]')?.value || "";
 
     const subject = encodeURIComponent(
       `New Anchor Project Request - ${business || name || "Website Lead"}`
