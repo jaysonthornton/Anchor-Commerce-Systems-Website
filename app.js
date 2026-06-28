@@ -1,7 +1,10 @@
 console.log("Anchor Commerce Systems site loaded.");
-const contactForm = document.getElementById("contactForm");
 
-if (contactForm) {
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contactForm");
+
+  if (!contactForm) return;
+
   contactForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -14,7 +17,9 @@ if (contactForm) {
     const service = formData.get("Service") || "";
     const message = formData.get("Message") || "";
 
-    const subject = encodeURIComponent(`New Anchor Project Request - ${business || name}`);
+    const subject = encodeURIComponent(
+      `New Anchor Project Request - ${business || name || "Website Lead"}`
+    );
 
     const body = encodeURIComponent(
 `Name: ${name}
@@ -27,6 +32,7 @@ Project Details:
 ${message}`
     );
 
-    window.location.href = `mailto:jaysonthornton@anchorcommercesystems.com?subject=${subject}&body=${body}`;
+    window.location.href =
+      `mailto:jaysonthornton@anchorcommercesystems.com?subject=${subject}&body=${body}`;
   });
-}
+});
